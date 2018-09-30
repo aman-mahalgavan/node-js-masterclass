@@ -73,7 +73,7 @@ const unifiedServer = (req, res) => {
 
         // route the request to the handler specified in the router
         chosenHandler(data, (statusCode, payload) => {
-            // use the status code called back by the handler or default ot 200
+            // use the status code called back by the handler or default to 200
             statusCode = typeof (statusCode) == 'number' ? statusCode : 200;
             // use the payload called back by the handler or default to {}
             payload = typeof (payload) == 'object' ? payload : {};
