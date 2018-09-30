@@ -11,7 +11,7 @@ const httpServer = http.createServer((req, res) => unifiedServer(req, res));
 
 // Start the HTTP server
 httpServer.listen(config.httpPort, () => {
-    console.log("The Server is listenig to port " + config.httpPort + " in " + config.envName + " mode");
+    console.log("The Server is listening to port " + config.httpPort + " in " + config.envName + " environment");
 });
 
 // TODO: Download SSL Certificate and create key.pem and cert.pem files
@@ -100,6 +100,7 @@ let router = {
     "sample": handlers.sample,
     "ping": handlers.ping,
     "users": handlers.users,
-    "tokens": handlers.tokens
+    "tokens": handlers.tokens,
+    "hello": handlers.helloWorld
 };
 
